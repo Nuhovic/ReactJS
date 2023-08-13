@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script src="index.js"></script>
+
+</html>
+
+
+
+
+
+function info() {
+    console.log('Statment');
+}
+
+let display = function () {
+    console.log('Expression');
+}
+
+const person = {
+    myInfo: function () {
+        console.log('Method');
+    }
+}
+
+const myFunc = name => console.log(`Arrow function  ${name}`);
+
+
+myFunc("Kadir Davud")
+
+
+let names = ["Mehmed", "Seid", "Adem"];
+
+names.forEach(name => {
+    console.log(name);
+})
