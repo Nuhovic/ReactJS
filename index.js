@@ -1,17 +1,21 @@
-function faktorijel(n) {
-    if (n === 0 || n === 1) {
-        return 1;
-    } else {
-        let faktorijelVrednost = 1;
-        for (let i = 2; i <= n; i++) {
-            faktorijelVrednost *= i;
+function findNumberPairsWithSum(arr, target) {
+    const pairs = [];
+    const seenNumbers = new Set();
+
+    for (let num of arr) {
+        const complement = target - num;
+
+        if (seenNumbers.has(complement)) {
+            pairs.push([num, complement]);
         }
-        return faktorijelVrednost;
+
+        seenNumbers.add(num);
     }
+
+    return pairs;
 }
 
-
-const broj = 5;
-const rezultat = faktorijel(broj);
-console.log(`Faktorijel broja ${broj} je ${rezultat}`);
-1
+const inputArray = [1, 2, 3, 4, 5];
+const targetSum = 7;
+const result = findNumberPairsWithSum(inputArray, targetSum);
+console.log(result);
